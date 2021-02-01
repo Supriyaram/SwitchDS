@@ -1,7 +1,8 @@
 package Modelpkg;
 
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import java.util.List;
 
 public class Load {
@@ -11,12 +12,13 @@ public class Load {
     private String load_type;
 
 
-    //Load and Rooms Association
-    @ManyToMany
+
+    //Mnay loads in same room belongs to a room
+    @ManyToOne
     private List<Rooms> rooms;
 
-    //Load and Switches Association
-    @ManyToMany
+    //One load is assigned with one switch
+    @OneToOne
     private List<Switches>switches;
 
 

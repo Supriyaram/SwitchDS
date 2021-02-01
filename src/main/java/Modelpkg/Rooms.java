@@ -11,13 +11,13 @@ public class Rooms {
          private Integer room_id;
         private String room_name;
 
-        //Rooms and Buildings Association
-        @ManyToMany(mappedBy = "rooms")
-        private List<Buildings> buildings;
+        //Many rooms belong to one partition(eg.house)
+        @ManyToOne
+        private Partitions partitions;
 
 
-        //Rooms and Loads Association
-        @ManyToMany(mappedBy = "rooms")
+        //A room has many loads
+        @OneToMany
         private List<Load> loads;
 
 

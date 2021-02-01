@@ -1,5 +1,3 @@
-
-
 package Modelpkg;
 
 
@@ -17,7 +15,7 @@ public class User {
 
 
     //User and Buildings Association
-    @OneToMany(mappedBy = "user")
+    @OneToMany
     private List<Buildings> buildings;
 
 }

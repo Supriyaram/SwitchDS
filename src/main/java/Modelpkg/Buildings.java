@@ -18,10 +18,10 @@ public class Buildings {
         @ManyToOne
         private User user;
 
+        //Buildings and Storey Association
+        @OneToMany
+        private List<Storey>  storeys;
 
-        //Buildings and Rooms Association
-        @ManyToMany
-        private List<Rooms> rooms;
 
 
 
